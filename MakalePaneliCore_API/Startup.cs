@@ -1,6 +1,8 @@
+using DataAccessLayer.AppDbContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace MakalePaneliCore_API
@@ -27,6 +30,13 @@ namespace MakalePaneliCore_API
         {
 
             services.AddControllers();
+            services.AddDbContext<Context>(x =>
+            {
+                x.UseSqlServer(Configuration.GetConnectionString("SqlConnection"), option =>
+                {
+                    option.MigrationsAssembly(Assembly.GetAssembly(typeof(Context)).GetName().Name);
+                });
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MakalePaneliCore_API", Version = "v1" });
