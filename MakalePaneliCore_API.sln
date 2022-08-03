@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakalePaneliCore_API", "MakalePaneliCore_API\MakalePaneliCore_API.csproj", "{BCDFD5F5-2DF0-43DD-AB7B-C8BBF061686E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCDFD5F5-2DF0-43DD-AB7B-C8BBF061686E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDFD5F5-2DF0-43DD-AB7B-C8BBF061686E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDFD5F5-2DF0-43DD-AB7B-C8BBF061686E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDFD5F5-2DF0-43DD-AB7B-C8BBF061686E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {149A8961-6A8C-4081-89CE-ACA04241AC30}
+	EndGlobalSection
+EndGlobal
