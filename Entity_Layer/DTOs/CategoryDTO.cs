@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity_Layer.Model
+namespace Entity_Layer.DTOs
 {
-   public class Category: BaseEntity
+    public class CategoryDTO:BaseDTO
     {
-        public List<Product> Products { get; set; }
-       
     }
 }

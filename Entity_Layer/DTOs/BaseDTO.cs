@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity_Layer.Model
+namespace Entity_Layer.DTOs
 {
-   public class Category: BaseEntity
+    public class BaseDTO
     {
-        public List<Product> Products { get; set; }
-       
+        public int ID { get; set; }
+        public string Name { get; set; }
     }
 }

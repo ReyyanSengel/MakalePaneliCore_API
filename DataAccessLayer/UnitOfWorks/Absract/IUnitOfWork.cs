@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity_Layer.Model
+namespace DataAccessLayer.UnitOfWorks.Absract
 {
-   public class Category: BaseEntity
+    public interface IUnitOfWork
     {
-        public List<Product> Products { get; set; }
-       
+        Task CommitAsync();
+        void Commit();
     }
 }

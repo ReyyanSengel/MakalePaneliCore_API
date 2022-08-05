@@ -4,18 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity_Layer.Model
+namespace Entity_Layer.DTOs
 {
-   public class Product: BaseEntity
+    public class ProductDTO:BaseDTO
     {
-        
         public string Subject { get; set; }
         public string Description { get; set; }
         public DateTime CreateDate { get; set; }
         public int CategoryID { get; set; }
         public int WriterID { get; set; }
-        public Category Category { get; set; }
-        public Writer Writer { get; set; }
-
     }
 }
