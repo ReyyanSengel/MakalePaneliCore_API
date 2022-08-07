@@ -23,9 +23,9 @@ namespace DataAccessLayer.Repository.Concrete
            await  _context.Set<T>().AddAsync(t);
         }
 
-        public void Delete(T t)
+        public  void Delete(T t)
         {
-            _context.Set<T>().Remove(t);
+             _context.Set<T>().Remove(t);
         }
 
         public IQueryable<T> GetAll()

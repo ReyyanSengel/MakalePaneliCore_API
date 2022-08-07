@@ -1,4 +1,7 @@
+using BusinessLayer.Mapping;
+using BusinessLayer.Validations;
 using DataAccessLayer.AppDbContext;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +32,13 @@ namespace MakalePaneliCore_API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(x=> 
+            {
+                x.RegisterValidatorsFromAssemblyContaining<ProductDTOValidator>();
+                x.RegisterValidatorsFromAssemblyContaining<CategoryDTOValidator>();
+                x.RegisterValidatorsFromAssemblyContaining<WriterDTOValidator>();
+                
+            });
             services.AddDbContext<Context>(x =>
             {
                 x.UseSqlServer(Configuration.GetConnectionString("SqlConnection"), option =>
@@ -41,6 +50,7 @@ namespace MakalePaneliCore_API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MakalePaneliCore_API", Version = "v1" });
             });
+            services.AddAutoMapper(typeof(MapProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

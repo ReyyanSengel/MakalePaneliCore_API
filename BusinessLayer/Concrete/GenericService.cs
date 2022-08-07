@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
         public void Delete(T t)
         {
             _repository.Delete(t);
-            _unitOfWork.Commit();
+           _unitOfWork.CommitAsync();
         }
 
         public IEnumerable<T> GetAll()
@@ -48,5 +48,7 @@ namespace BusinessLayer.Concrete
             _repository.Update(t);
             _unitOfWork.Commit();
         }
+
+       
     }
 }
