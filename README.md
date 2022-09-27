@@ -4,12 +4,12 @@ Katmanlı mimari ile Makale Paneli
 Proje kapsamında ASP.NET Core Web API kullanılarak makale apisi geliştirildi. Bu api üzerinden
 makale listeleme, arama, ekleme, güncelleme ve silme işlemlerinin REST çağrıları ile yapılıyor.
 
-Used Technologies:
+Used Technologies:<br/>
+*ASP.NET Core API<br/>
+*MYSQL<br/>
+*AutoMapper<br/>
+*FluentValidation<br/>
 
-*ASP.NET Core API
-*MYSQL
-*AutoMapper
-*FluentValidation
+Best Practices:<br/>
+N-tier Architecture, Dependency injection,, DTO, Generic Repository,UnitOfWork
 
-Best Practices:
-N-tier Architecture, Dependency injection,, DTO, Generic Repository,UnitOfWork,
