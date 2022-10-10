@@ -2,7 +2,7 @@
 Katmanlı mimari ile Makale Paneli
 
 Proje kapsamında ASP.NET Core Web API kullanılarak makale apisi geliştirildi. Bu api üzerinden
-makale listeleme, arama, ekleme, güncelleme ve silme işlemlerinin REST çağrıları ile yapılıyor.
+makale listeleme, arama, ekleme, güncelleme ve silme işlemleri REST çağrıları ile yapılıyor.
 
 Used Technologies:<br/>
 *ASP.NET Core API<br/>
